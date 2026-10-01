@@ -1,0 +1,35 @@
+| Command   | Purpose                              | Example                                |
+| --------- | ------------------------------------ | -------------------------------------- |
+| `pwd`     | Show current directory               | `pwd`                                  |
+| `ls`      | List files/directories               | `ls -la`                               |
+| `cd`      | Change directory                     | `cd /var/log`                          |
+| `mkdir`   | Create directory                     | `mkdir project`                        |
+| `touch`   | Create empty file                    | `touch notes.txt`                      |
+| `cp`      | Copy files/directories               | `cp file.txt backup.txt`               |
+| `mv`      | Move or rename                       | `mv old.txt new.txt`                   |
+| `rm`      | Delete file                          | `rm file.txt`                          |
+| `rmdir`   | Remove empty directory               | `rmdir olddir`                         |
+| `cat`     | Display file contents                | `cat file.txt`                         |
+| `less`    | View long files                      | `less /var/log/syslog`                 |
+| `head`    | Show beginning of file               | `head -n 20 file.txt`                  |
+| `tail`    | Show end of file                     | `tail -f app.log`                      |
+| `grep`    | Search text                          | `grep "error" app.log`                 |
+| `find`    | Find files/directories               | `find . -name "*.txt"`                 |
+| `chmod`   | Change permissions                   | `chmod +x script.sh`                   |
+| `chown`   | Change ownership                     | `sudo chown user:user file.txt`        |
+| `df`      | Check disk space                     | `df -h`                                |
+| `du`      | Check directory/file size            | `du -sh *`                             |
+| `free`    | Check memory usage                   | `free -h`                              |
+| `ps`      | Show processes                       | `ps aux`                               |
+| `top`     | Monitor processes                    | `top`                                  |
+| `kill`    | Stop a process                       | `kill 1234`                            |
+| `whoami`  | Show current username                | `whoami`                               |
+| `uname`   | System/kernel information            | `uname -a`                             |
+| `ip`      | Network information                  | `ip addr`                              |
+| `ping`    | Test network connectivity            | `ping google.com`                      |
+| `curl`    | Make/download HTTP requests          | `curl -O https://example.com/file.zip` |
+| `ssh`     | Connect to remote Linux machine      | `ssh user@server`                      |
+| `tar`     | Create/extract archives              | `tar -xvf archive.tar`                 |
+| `sudo`    | Run command with elevated privileges | `sudo apt update`                      |
+| `history` | Show command history                 | `history`                              |
+| `man`     | Open command manual                  | `man grep`                             |
