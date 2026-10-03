@@ -1,0 +1,94 @@
+1. Start / Stop / Restart Jenkins
+
+Linux (systemd):
+
+sudo systemctl start jenkins
+sudo systemctl stop jenkins
+sudo systemctl restart jenkins
+sudo systemctl status jenkins
+
+Enable Jenkins at boot:
+
+sudo systemctl enable jenkins
+2. Check Jenkins logs
+sudo journalctl -u jenkins
+
+Live logs:
+
+sudo journalctl -u jenkins -f
+
+Last 100 lines:
+
+sudo journalctl -u jenkins -n 100
+3. Check Jenkins service
+systemctl is-active jenkins
+systemctl is-enabled jenkins
+4. Jenkins port
+
+Jenkins normally runs on port 8080.
+
+Check whether port 8080 is being used:
+
+sudo ss -tulpn | grep 8080
+
+Or:
+
+sudo lsof -i :8080
+5. Jenkins home directory
+
+Usually:
+
+/var/lib/jenkins
+
+Check:
+
+ls -la /var/lib/jenkins
+
+Check disk space:
+
+df -h
+
+Check Jenkins directory size:
+
+sudo du -sh /var/lib/jenkins
+
+This is especially useful for the "No space left on device" issue you were troubleshooting recently.
+
+6. Jenkins CLI
+
+If Jenkins CLI is configured:
+
+java -jar jenkins-cli.jar -s http://localhost:8080/
+
+List jobs:
+
+java -jar jenkins-cli.jar -s http://localhost:8080/ list-jobs
+
+Build a job:
+
+java -jar jenkins-cli.jar -s http://localhost:8080/ build JOB_NAME
+7. Jenkins process
+
+Find Jenkins process:
+
+ps aux | grep jenkins
+
+Find Java processes:
+
+ps -ef | grep java
+8. Useful Linux commands for Jenkins troubleshooting
+free -h
+df -h
+du -sh /var/lib/jenkins/*
+top
+htop
+uptime
+⭐ Most important commands to remember
+sudo systemctl status jenkins
+sudo systemctl restart jenkins
+sudo journalctl -u jenkins -f
+df -h
+sudo du -sh /var/lib/jenkins
+ps -ef | grep jenkins
+sudo ss -tulpn | grep 8080
+Jenki
